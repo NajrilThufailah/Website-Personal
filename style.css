@@ -1,0 +1,262 @@
+:root {
+  --primary: #ff7300;
+  --bg: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  color: #010101;
+  line-height: 1.6;
+}
+
+header {
+  background-color: none;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 80px;
+}
+
+/* Styling untuk navigasi */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Menyembunyikan daftar navigasi secara default pada layar kecil */
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Menampilkan menu secara horizontal */
+}
+
+.nav-list li {
+  margin-left: 20px;
+}
+
+.nav-list li a {
+  color: #010101;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: background-color 0.3s;
+}
+
+.nav-list li a:hover {
+  color: var(--primary);
+}
+
+/* Hamburger menu */
+.menu-toggle {
+  display: none; /* Sembunyikan hamburger menu secara default */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  height: 3px;
+  width: 25px;
+  background-color: #010101;
+  color: #010101;
+  margin: 3px 0;
+}
+
+.produk-unggulan {
+  display: flex; /* Menggunakan Flexbox */
+  justify-content: space-around; /* Menyebar produk secara merata */
+  flex-wrap: wrap; /* Membungkus elemen jika diperlukan */
+  margin-top: 20px; /* Margin di atas kontainer produk */
+}
+
+.produk {
+  text-align: center; /* Teks di tengah */
+  margin: 10px; /* Margin di sekitar produk */
+  flex: 1 1 200px; /* Membuat produk responsif */
+}
+
+.gambar-ramen {
+  width: 100%; /* Gambar akan mengambil lebar penuh dari kontainer */
+  height: auto; /* Tinggi gambar akan disesuaikan secara otomatis untuk menjaga proporsi */
+  border-radius: 10px; /* Sudut melengkung pada gambar */
+}
+
+/* Styling untuk konten utama */
+main {
+  padding: 20px;
+  background-color: white; /* Warna latar belakang konten */
+  border-radius: 8px; /* Sudut melengkung */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan */
+  margin: 20px; /* Margin di sekitar konten */
+}
+
+/* Styling untuk judul */
+h1 {
+  color: #ff6347; /* Ubah warna teks pada judul */
+  margin-bottom: 20px; /* Margin di bawah judul */
+  font-style: italic;
+}
+
+/* Styling untuk formulir */
+form {
+  display: flex; /* Menggunakan flexbox untuk tata letak */
+  flex-wrap: wrap; /* Membungkus elemen jika diperlukan */
+  margin-bottom: 20px; /* Margin di bawah formulir */
+  padding: 20px; /* Padding di dalam formulir */
+  background-color: #f9f9f9; /* Warna latar belakang formulir */
+  border-radius: 8px; /* Sudut melengkung */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan */
+}
+
+/* Styling untuk label */
+label {
+  flex: 1 1 100%; /* Membuat label mengambil lebar penuh */
+  margin: 10px 0 5px; /* Margin untuk label */
+  font-weight: bold; /* Menebalkan teks label */
+}
+
+/* Styling untuk input dan select */
+input[type="text"],
+input[type="number"],
+select {
+  flex: 1 1 200px; /* Membuat input dan select memiliki lebar minimum */
+  padding: 10px; /* Padding di dalam input */
+  border: 1px solid #ccc; /* Border input */
+  border-radius: 4px; /* Sudut melengkung */
+  margin-right: 10px; /* Margin di sebelah kanan */
+  transition: border-color 0.3s; /* Transisi untuk border */
+}
+
+/* Efek fokus pada input dan select */
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+  border-color: #ff6347; /* Warna border saat fokus */
+  outline: none; /* Menghilangkan outline default */
+}
+
+/* Styling untuk tombol */
+button {
+  background-color: #ff6347; /* Warna latar belakang tombol */
+  color: white; /* Warna teks tombol */
+  border: none; /* Menghilangkan border */
+  padding: 10px 15px; /* Padding di dalam tombol */
+  border-radius: 4px; /* Sudut melengkung */
+  cursor: pointer; /* Menunjukkan kursor pointer */
+  transition: background-color 0.3s; /* Efek transisi */
+  font-weight: bold; /* Menebalkan teks tombol */
+}
+
+/* Efek hover pada tombol */
+button:hover {
+  background-color: #e5533d; /* Warna saat hover */
+}
+
+/* Styling untuk tabel */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table,
+th,
+td {
+  border: 1px solid #ddd; /* Border tabel */
+}
+
+th,
+td {
+  padding: 12px; /* Padding di dalam sel */
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2; /* Warna latar belakang header tabel */
+  color: #333; /* Warna teks header */
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9; /* Warna latar belakang baris genap */
+}
+
+tr:hover {
+  background-color: #f1f1f1; /* Efek hover pada baris tabel */
+}
+
+/* Styling untuk profil toko */
+.profil-toko {
+  background-color: #f9f9f9; /* Warna latar belakang */
+  padding: 20px; /* Padding di dalam section */
+  border-radius: 8px; /* Sudut melengkung */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan */
+  margin-top: 20px; /* Margin di atas section */
+}
+
+/* Styling untuk judul toko */
+h2 {
+  color: #ff6347; /* Warna untuk judul toko */
+  margin-bottom: 10px; /* Margin di bawah judul */
+  font-size: 24px; /* Ukuran font judul */
+}
+
+/* Styling untuk subjudul */
+h3 {
+  margin-top: 15px; /* Margin di atas subjudul */
+  color: #333; /* Warna untuk subjudul */
+  font-size: 20px; /* Ukuran font subjudul */
+}
+
+/* Styling untuk paragraf */
+p {
+  color: #555; /* Warna teks paragraf */
+  line-height: 1.6; /* Jarak antar baris */
+  margin-bottom: 10px; /* Margin di bawah paragraf */
+}
+
+/* Styling untuk footer */
+footer {
+  background-color: #333; /* Warna latar belakang footer */
+  color: white; /* Warna teks footer */
+  text-align: center; /* Teks rata tengah */
+  padding: 10px 0; /* Padding di atas dan bawah */
+  position: relative; /* Posisi relatif */
+  bottom: 0; /* Menempatkan footer di bawah */
+  width: 100%; /* Lebar penuh */
+}
+
+/* Media query untuk layar kecil */
+@media (max-width: 768px) {
+  .nav-list {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .nav-list.active {
+    display: flex; /* Tampilkan menu saat aktif */
+  }
+
+  .menu-toggle {
+    display: flex; /* Tampilkan hamburger menu */
+  }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ichiraku Ramen</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- feather icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- my style -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <body>
+        <header>
+            <img src="logo.png/logo.png" alt="Logo Aplikasi Ramen" class="logo">
+            <nav>
+                <div class="menu-toggle" id="mobile-menu">
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                </div>
+                <ul class="nav-list">
+                  <li><a href="index.html">Beranda</a></li>
+                  <li><a href="transaksi.html">Transaksi</a></li>
+                  <li><a href="profil.html">Profil</a></li>
+                  <li><a href="login.html">Login</a></li>
+                </ul>
+              </nav>
+        </header>
+    
+        <main>
+            <h1>Silahkann pesan ramen yang diinginkan:</h1>
+            <form id="transaksiForm">
+                <label for="namaRamen">Pilih Ramen:</label>
+                <select id="namaRamen" required>
+                    <option value="" disabled selected>Pilih ramen...</option>
+                    <option value="Ramen Spesial" data-harga="20000">Ramen Spesial - Rp 20.000</option>
+                    <option value="Ramen Pedas" data-harga="25000">Ramen Pedas - Rp 25.000</option>
+                    <option value="Ramen Vegetarian" data-harga="30000">Ramen Vegetarian - Rp 30.000</option>
+                    <option value="Ramen Miso" data-harga="28000">Ramen Miso - Rp 28.000</option> <!-- Ramen baru -->
+                    <option value="Ramen Curry" data-harga="32000">Ramen Curry - Rp 32.000</option> <!-- Ramen baru -->
+                </select>
+                
+                <label for="jumlah">Jumlah:</label>
+                <input type="number" id="jumlah" required>
+                
+                <button type="submit">Simpan</button>
+            </form>
+            
+            <h2>DAFTAR PESANAN</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID Pembeli</th>
+                        <th>Nama Ramen</th>
+                        <th>Jumlah</th>
+                        <th>Harga</th>
+                        <th>Total Harga</th>
+                        <th>Tanggal</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="daftarTransaksi">
+                    <!-- Data transaksi akan ditambahkan di sini -->
+                </tbody>
+            </table>
+        </main>
+
+        <script src="script.js"></script>
+    
+        <footer>
+            <p>&copy; 2023 Aplikasi Ramen</p>
+        </footer>
+  </body>
+</html>
